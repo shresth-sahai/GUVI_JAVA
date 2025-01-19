@@ -20,6 +20,7 @@ long varLong=var;// automatically converted into long
     // narrowing // downcasting
     int integerVariable =10;
     byte byteVaribale=(byte) integerVariable;
+
 //    int num = 130;   -128 to 127
 //    byte b = (byte) num;
 //        System.out.println(b);
@@ -35,7 +36,7 @@ long varLong=var;// automatically converted into long
     // 1/2 -> 0 , 1
     // byte -> -128 to 127
     //  byte   1000010
-int num=130 ; //  00000000    00000000   00000000     1000010
+int num=130 ; //  00000000    00000000   00000000   1000010
     //   byte b1=130 ; // 1000010
     // byte uses 2's complement ->  signed number
     // MSB 0 -> postive     1 negetive
@@ -43,8 +44,7 @@ int num=130 ; //  00000000    00000000   00000000     1000010
     // 1000010   invert bits -> 0111101
     // 0111101+1 = 0111110 -> 126
     // -126
-
-    // 127 ->      00000000    00000000   00000000       01111111
+    // 127 ->      00000000    00000000   00000000   01111111
     // byte ->       01111111 msb -> 0 -> positive
     // range -> -128 to 127 no chnage
 
@@ -55,5 +55,19 @@ int num=130 ; //  00000000    00000000   00000000     1000010
     // num -> 127 % 256 -> 127
     // num -> 300 % 256 -> 44
     // -130
+    // trick fr not fitting the range
+    // 1000 -> 232
+    // 232 -256 = -24
+
+// 200 % 256 -> 200
+    // 200- 256 = -56
+
+    // promotion during expression
+    byte b11=1;
+    byte b12=127;
+//    byte sum= b11 + b12; outsied the range
+    int sum=b11+b12;
+
+
 
 }
