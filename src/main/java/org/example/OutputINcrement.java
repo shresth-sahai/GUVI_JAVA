@@ -26,10 +26,11 @@ public class OutputINcrement {
 
 
 //    // 1. Pre/Post Increment with chars
-//      char ch1 = 'a';
+//      char ch1 = 'a'; -> 97 -> 98
 //        System.out.println("Original ch1: " + ch1);        // a
 //        System.out.println("Post-increment: " + ch1++);    // a
 //        System.out.println("After post-increment: " + ch1);// b
+    // System.out.println("After post-increment: " + (int)ch1);
 //
 //    char ch2 = 'x';
 //        System.out.println("\nOriginal ch2: " + ch2);      // x
@@ -72,3 +73,17 @@ public class OutputINcrement {
 //        System.out.println("After increment: " + (int)ch9);  // Wraps to 0
 
 }
+// char -> 16 bit unsigned integer
+// 65535      0 to 65532       1111 1111 1111 1111
+// 65536      0 to 65532       0000 0000 0000 0000
+// 1 leftmost destroyed
+
+
+// char z='Z' ch++ char ch2=255 ch2++  [
+// char ch1=65536 -> err
+// char ch2=(char) 65536 -> 0
+
+// char ch3= 65534 print(int(ch3)) ch3++
+// print(int(ch3)) ch3++
+// print(int(ch3)) ch3++
+//print(int(ch3)) -> 1
